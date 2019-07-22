@@ -23,3 +23,10 @@ steps:
     arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
 
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(c7f30f90-aefb-461d-8280-f26c74989d3c)'
+    appType: 'webAppLinux'
+    WebAppName: 'pateraslinuxapp'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
