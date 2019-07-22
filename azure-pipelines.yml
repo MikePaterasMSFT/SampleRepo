@@ -29,4 +29,4 @@ steps:
     azureSubscription: 'Free Trial(c7f30f90-aefb-461d-8280-f26c74989d3c)'
     appType: 'webAppLinux'
     WebAppName: 'pateraslinuxapp'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
